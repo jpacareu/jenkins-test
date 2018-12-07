@@ -16,7 +16,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'php --version'
-                sh 'echo "Hello World ${env.BUILD_URL}"'
+                sh 'echo "Hello World"'
             }
         }
     }

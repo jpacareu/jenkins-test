@@ -3,13 +3,14 @@ pipeline {
     environment {
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
+        BUILD_URL    = 'localhost'
     }
     post {
         always {
             echo 'One way or another, I have finished'
             mail    to: 'jpaca1991@gmail.com',
                     subject: "Failed Pipeline",
-                    body: "Something is wrong!"
+                    body: "Something is wrong with ${env.BUILD_URL}"
         }
     }
     stages {

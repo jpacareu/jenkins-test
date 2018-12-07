@@ -1,5 +1,9 @@
 pipeline {
     agent { docker { image 'php' } }
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
     stages {
         stage('build') {
             steps {
@@ -8,7 +12,6 @@ pipeline {
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
-                    npm install
                 '''
             }
         }

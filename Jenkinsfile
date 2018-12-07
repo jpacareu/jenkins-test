@@ -7,7 +7,6 @@ pipeline {
     }
     post {
         always {
-            echo 'One way or another, I have finished'
             mail    to: 'jpaca1991@gmail.com',
                     subject: "Failed Pipeline",
                     body: "Something is wrong with ${env.BUILD_URL}"

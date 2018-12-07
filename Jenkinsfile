@@ -9,7 +9,7 @@ pipeline {
         always {
             mail    to: 'jpaca1991@gmail.com',
                     subject: "Failed Pipeline",
-                    body: "Something is wrong with ${env.BUILD_URL}"
+                    body: "Something is wrong with"
         }
     }
     stages {

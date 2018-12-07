@@ -7,7 +7,7 @@ pipeline {
     }
     post {
         always {
-            mail    to: 'jpaca1991@gmail.com',
+            mail to: 'jpaca1991@gmail.com',
                     subject: "Failed Pipeline",
                     body: "Something is wrong with"
         }
